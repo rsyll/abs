@@ -1,0 +1,128 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #fff0f5;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.story-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+h1 {
+    color: #ff69b4;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.scene {
+    margin: 30px 0;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #fff9fb;
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+.scene:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(255, 105, 180, 0.2);
+}
+
+h2 {
+    color: #ff1493;
+    margin-top: 0;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.character {
+    width: 100px;
+    height: 100px;
+    margin: 20px auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.character:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.rose {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="%23ff69b4"/><circle cx="35" cy="40" r="8" fill="%23fff"/><circle cx="65" cy="40" r="8" fill="%23fff"/><path d="M40,65 Q50,75 60,65" stroke="%23333" stroke-width="2" fill="none"/></svg>');
+}
+
+.pet {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="%23ffb6c1"/><circle cx="35" cy="40" r="8" fill="%23333"/><circle cx="65" cy="40" r="8" fill="%23333"/><path d="M40,65 Q50,75 60,65" stroke="%23333" stroke-width="2" fill="none"/><circle cx="30" cy="30" r="3" fill="%23fff"/><circle cx="70" cy="30" r="3" fill="%23fff"/></svg>');
+}
+
+.house {
+    width: 150px;
+    height: 150px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><polygon points="50,10 90,50 90,90 10,90 10,50" fill="%23ffc0cb"/><rect x="40" y="50" width="20" height="40" fill="%23deb887"/><polygon points="40,60 50,50 60,60" fill="%23ff69b4"/><circle cx="25" cy="30" r="5" fill="%23fffacd"/><circle cx="75" cy="30" r="5" fill="%23fffacd"/></svg>');
+}
+
+.interactive-element {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-family: inherit;
+    font-size: 1em;
+    cursor: pointer;
+    margin: 10px;
+    transition: all 0.3s ease;
+}
+
+.interactive-element:hover {
+    background-color: #ff1493;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(255, 20, 147, 0.3);
+}
+
+.hidden-content {
+    display: none;
+    padding: 15px;
+    margin-top: 15px;
+    background-color: #fff0f5;
+    border-radius: 10px;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.sparkle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #fffacd;
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0;
+}
+
+footer {
+    margin-top: 30px;
+    color: #ff69b4;
+    font-size: 0.9em;
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>faye Life</title>
+   <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="story-container">
+        <h1> ABOUT ME</h1>
+        
+        <div class="scene">
+            <h2>Personal</h2>
+            <div class="character rose" id="rose-character"></div>
+            <p>I'm Rochell Faye Oro , 19yrs old still living with my fam and already at first year college still taking 
+                 BSIT. My height was 5'2 , my type was AB+( it was you;> ) I have 3 brothers im the only girl i hope i had a sister.
+                 </p>
+            <button class="interactive-element" onclick="showContent('rose-secret')">Discover a Secret</button>
+            <div id="rose-secret" class="hidden-content">
+                <p>I dont wanna grow older, i felt my heights sucks. I really wish i had a sister rather than brothers(ngl ilove them) it just 
+                    that it was great to have someone same interest.
+                </p>
+            </div>
+        </div>
+        
+        <div class="scene">
+            <h2>MOODS</h2>
+            <div class="character pet" id="pet-character"></div>
+            <p> I really have a bad temp so that's why i dont like waiting on someone, I'm happy most of the time (act like you're not interested
+                I'll switch up real quick), I cry for small things especially when I'm alone, and i keep changing my mind everytime especially 
+                when i get irratated. </p>
+            <button class="interactive-element" onclick="changePet()">Discover a Secret</button>
+            <div id="pet-facts" class="hidden-content">
+                <p>I rather hide my valunable side to everyone than let them know I'm indeed soft hearted too, I don't want them to see my lowest.</p>
+            </div>
+        </div>
+        
+        <div class="scene">
+            <h2>My Home</h2>
+            <div class="character house" id="house"></div>
+            <p> Being understand by someone is the greatest gift i would recieved nothing can beat that, a someone who has the same interest and humor.
+                Been known without asking can make my heart jump (olahlah), having someone appreaciated you for who you are can really get comfortable, 
+                nothing rather than this can call you as HOME. </p>
+            <button class="interactive-element" onclick="showContent('house-secret')">Discover my comfort</button>
+            <div id="house-secret" class="hidden-content">
+                <p>I wish i had someone who's gentle like a feather(eme it's like having a standard), I just need someone who can make me comfortable i really
+                    felt uneasy sharing my personal issues. I hope this someone can understand how really bad am i sharing my problem espeacially when my
+                    prob was just not it, I'm sorry (i felt like no one could and will be understand it) always MISUNDERSTOOD </p>
+            </div>
+        </div>
+        
+        <div class="scene">
+            <h2>Friend/besties</h2>
+            <p> I have a small circle of friends, just one is th closest. Friends is my get away to have fun in any circumstance i needed a company
+                they were just a friend that you can call when you are alone. Bestie can be your hotline anytime that you feel so down
+            </p>
+            <button class="interactive-element" onclick="createSparkles()">Untold</button>
+            <div id="adventure-time" class="hidden-content">
+                <p>My friends is the most helpful to boost my finest as experiencing YOLO not giving a damn fuck to anyone and everything in life.
+                    I mostly experience the things that can lead me to nothing but this help me live a life for awhile. I'm just thankful to my 911.
+                </p>
+            </div>
+        </div>
+        
+        <div class="scene">
+            <h2>Crush/Admiring</h2>
+            <p> I really could done anything try to give you everything i have if you show me a little bit of care, I can do things i never have done.
+                If i like you i would likely to spam you, im someone who enjoy's to see the one my crush to be happy. I'm shy to everything especially
+                when it was you. </p>
+            <button class="interactive-element" onclick="showContent('friends-secret')">FYI</button>
+            <div id="friends-secret" class="hidden-content">
+                <p> Please don't take advantage of me, if you don't like just be honest and leave already. Dont pity me.</p>
+            </div>
+        </div>
+        
+        <footer>
+            <p>That's all thankyou</p>
+        </footer>
+    </div>
+
+    <script>
+        // Show hidden content
+        function showContent(id) {
+            const element = document.getElementById(id);
+            element.style.display = element.style.display === 'block' ? 'none' : 'block';
+        }
+        
+        // Change pet appearance
+        function changePet() {
+            const pet = document.getElementById('pet-character');
+            const colors = ['#ffb6c1', '#add8e6', '#98fb98', '#fffacd', '#e6e6fa'];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            
+            pet.style.backgroundImage = pet.style.backgroundImage.includes('ffb6c1') ? 
+                `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="${randomColor}"/><circle cx="35" cy="40" r="8" fill="%23333"/><circle cx="65" cy="40" r="8" fill="%23333"/><path d="M40,65 Q50,80 60,65" stroke="%23333" stroke-width="2" fill="none"/><circle cx="30" cy="30" r="3" fill="%23fff"/><circle cx="70" cy="30" r="3" fill="%23fff"/></svg>')` :
+                `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="${randomColor}"/><circle cx="35" cy="40" r="8" fill="%23333"/><circle cx="65" cy="40" r="8" fill="%23333"/><path d="M40,65 Q50,75 60,65" stroke="%23333" stroke-width="2" fill="none"/><circle cx="30" cy="30" r="3" fill="%23fff"/><circle cx="70" cy="30" r="3" fill="%23fff"/></svg>')`;
+            
+            showContent('pet-facts');
+        }
+        
+        // Create sparkle effect
+        function createSparkles() {
+            const container = document.querySelector('.story-container');
+            
+            for (let i = 0; i < 30; i++) {
+                const sparkle = document.createElement('div');
+                sparkle.className = 'sparkle';
+                sparkle.style.left = Math.random() * 100 + '%';
+                sparkle.style.top = Math.random() * 100 + '%';
+                sparkle.style.width = Math.random() * 10 + 5 + 'px';
+                sparkle.style.height = sparkle.style.width;
+                
+                container.appendChild(sparkle);
+                
+                // Animate sparkle
+                setTimeout(() => {
+                    sparkle.style.opacity = '0.8';
+                    sparkle.style.transition = 'all 1s ease';
+                    sparkle.style.transform = 'scale(1.5)';
+                    
+                    setTimeout(() => {
+                        sparkle.style.opacity = '0';
+                        setTimeout(() => {
+                            sparkle.remove();
+                        }, 1000);
+                    }, 500);
+                }, i * 50);
+            }
+            
+            showContent('adventure-time');
+        }
+        
+        // Make Rose character interactive
+        document.getElementById('rose-character').addEventListener('click', function() {
+            this.style.transform = 'scale(1.2) rotate(10deg)';
+            setTimeout(() => {
+                this.style.transform = '';
+            }, 500);
+        });
+    </script>
+</body>
+</html>
